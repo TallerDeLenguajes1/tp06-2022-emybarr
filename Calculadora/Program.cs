@@ -7,18 +7,17 @@ int operador, continuar = 1 ;
 double resultado;
 
 do{
-    Console.WriteLine("Elegir la Opecion a Realizar ");
-    do{
-        Console.WriteLine(" 1-SUMA\n 2-RESTA \n 3-MULTIPLICACION\n 4-DIVISION \n ");
+  do{
+        Console.WriteLine(" 1-SUMA\n 2-RESTA \n 3-MULTIPLICACION\n 4-DIVISION \n 5-LIMPIAR ");
         operador=Convert.ToInt32(Console.ReadLine());
-    }while(operador < 1 || operador > 4);
 
+  }while(operador < 1 || operador > 5);
 
+        Console.WriteLine("Ingreser un numero : ");
+        calcu.Numero1=Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Ingreser un numero : ");
+        calcu.Numero2=Convert.ToDouble(Console.ReadLine());
 
- Console.WriteLine("Ingreser un numero : ");
-calcu.Numero1=Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Ingreser un numero : ");
-calcu.Numero2=Convert.ToDouble(Console.ReadLine());
 
 switch(operador){
     case 1 : 
@@ -27,7 +26,7 @@ switch(operador){
     break;
     case 2 : 
     resultado=calcu.restar();
-   Console.WriteLine($"El resultado es {resultado}");
+    Console.WriteLine($"El resultado es {resultado}");
     break;
     case 3 : 
     resultado=calcu.multiplicar();
@@ -41,23 +40,20 @@ switch(operador){
     Console.WriteLine($"El resultado es {resultado}");
     }
     break;
-    
-
+    default:
+    break;
+   
 }
- calcu.Numero1= calcu.Limpiar();
- calcu.Numero2 = calcu.Limpiar();
- resultado =  calcu.Limpiar();
+    calcu.Numero1= calcu.Limpiar();
+    calcu.Numero2 = calcu.Limpiar();
+    resultado =  calcu.Limpiar();
+      
 
+    Console.WriteLine("Seguir usando la calculadoa 1-SI 0-NO");
+    continuar=Convert.ToInt32(Console.ReadLine());
 
-  do{ 
-        Console.WriteLine("Seguir usando la calculadoa 1-SI ");
-        continuar=Convert.ToInt32(Console.ReadLine());
+    }while(continuar==1);
 
-    }while(continuar == 0);
-
-    Console.WriteLine($"numero 1 {calcu.Numero1} || numero 2 {calcu.Numero2}" ) ;
-
-}while(continuar ==1);
 
 
 

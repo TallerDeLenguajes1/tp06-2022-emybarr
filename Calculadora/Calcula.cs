@@ -15,7 +15,7 @@ namespace Calculadora
         public double Numero2 { get => numero2; set => numero2 = value; }
       
 
-        public double sumar()
+    public double sumar()
     {
     return Numero1 + Numero2 ; 
     }
@@ -36,7 +36,8 @@ namespace Calculadora
         
     }
 
-     public int  Limpiar(){
+    public int  Limpiar()
+    {
         return 0;
 
     }
