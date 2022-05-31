@@ -7,10 +7,10 @@ namespace Ejercicio2
     {
         static void Main(string[] args)
         {
-               empleado[] empleado1 = new empleado[2] ;
+               empleado[] empleado1 = new empleado[3] ;
             
 
-         for(int i= 0; i < 2; i++){
+         for(int i= 0; i < 3; i++){
            
             empleado1[i]= crearEmpleado();
             Console.WriteLine("---------------------------------------------------");
